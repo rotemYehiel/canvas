@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>canvas</title>
+</head>
+
+<body onload="init()">
+    <div class="canvas-container">
+        <canvas id="my-canvas" height="450" width="450" touchstart="startDraw(event)" onmousedown="startDraw(event)" onmousemove="draw(event)" onmouseup=" stopDraw(event)" style="border: 1px solid black;"></canvas>
+    </div>
+
+    <!-- onclick="draw(event)" -->
+    <img src="img/dog.jpg" alt="" style="display: none;">
+    <hr>
+
+
+    <input onchange="getFillColor()" type="color" id="fill-color" name="f-color" value="#ff0000">
+    <input onchange="getLineColor()" type="color" id="line-color" name="l-color" value="#ff0000">
+
+    <select onchange="setShape(value)" id="shape">
+        <option value="null">Choose shape...</option>
+        <option value="triangle">Triangle</option>
+        <option value="rect">Rect</option>
+        <option value="text">Text</option>
+        <option value="line">Line</option>
+      </select>
+
+    <button onclick="clearCanvas()">Clear</button>
+
+
+    <!-- <button class="btn" type="submit">Publish</button> -->
+
+    <a href="#" onclick="downloadCanvas(this)" download="">Save</a>
+
+    <script src="lib/hammer.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

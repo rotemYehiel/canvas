@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+}
+
+.canvas-container {
+    background-color: aquamarine;
+    margin: auto;
+    /* padding: 20px; */
+    width: 100vw;
+    height: 500px;
+    border: 1px solid red;
+}
